@@ -1,0 +1,124 @@
+nav:
+  fixed: true
+  display_title: true
+  display_post_title: true
+
+menu:
+  首页: / || fas fa-house
+  时间线: /timeline/ || fas fa-timeline
+  项目: /projects/ || fas fa-diagram-project
+  此刻: /now/ || fas fa-bolt
+  关于: /about/ || fas fa-user
+  归档: /archives/ || fas fa-box-archive
+  分类: /categories/ || fas fa-folder-tree
+  标签: /tags/ || fas fa-tags
+
+favicon: /img/site-mark.svg
+
+avatar:
+  img: /img/avatar-line.svg
+  effect: true
+
+index_img: /img/timeline-hero.svg
+archive_img: /img/timeline-hero.svg
+default_top_img: /img/timeline-hero.svg
+
+cover:
+  index_enable: false
+  aside_enable: false
+  archives_enable: false
+
+subtitle:
+  enable: true
+  effect: true
+  sub:
+    - 用文章记录项目、节点与变化
+    - 把经历整理成一条能回看的时间线
+    - Hexo + Butterfly + 少量自定义页面
+
+post_meta:
+  page:
+    date_type: created
+    date_format: date
+    categories: true
+    tags: true
+    label: true
+  post:
+    position: left
+    date_type: both
+    date_format: date
+    categories: true
+    tags: true
+    label: true
+
+toc:
+  post: true
+  page: true
+  number: true
+  expand: false
+  style_simple: false
+  scroll_percent: true
+
+aside:
+  enable: true
+  hide: false
+  button: true
+  mobile: true
+  position: right
+  display:
+    archive: true
+    tag: true
+    category: true
+  card_author:
+    enable: true
+    description: 把文章、项目和生活片段整理成可追溯的时间流。
+    button:
+      enable: true
+      icon: fas fa-id-card
+      text: 了解我
+      link: /about/
+  card_announcement:
+    enable: true
+    content: 这不是传统博客首页，而是一条持续更新的个人时间线。
+  card_recent_post:
+    enable: true
+    limit: 5
+    sort: date
+  card_archives:
+    enable: true
+    type: monthly
+    format: MMMM YYYY
+    order: -1
+    limit: 6
+
+social:
+  fas fa-envelope: mailto:hello@example.com || Email || '#3f5c4d'
+  fab fa-github: https://github.com/example || GitHub || '#1f2937'
+
+search:
+  use: local_search
+  placeholder: 搜索时间线里的文章与页面
+  local_search:
+    preload: true
+    top_n_per_article: 2
+    unescape: false
+    pagination:
+      enable: true
+      hitsPerPage: 8
+
+footer:
+  owner:
+    enable: true
+    since: 2026
+  copyright:
+    enable: false
+  custom_text: 用时间线视角整理长期积累
+
+post_copyright:
+  enable: false
+
+inject:
+  head:
+    - <link rel="stylesheet" href="/css/custom.css">
+  bottom:
+    - <script defer src="/js/custom.js"></script>

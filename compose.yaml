@@ -1,0 +1,10 @@
+services:
+  blog:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: timeline-blog:latest
+    container_name: timeline-blog
+    ports:
+      - "8080:80"
+    restart: unless-stopped
