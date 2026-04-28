@@ -93,7 +93,7 @@ aside:
 
 social:
   fas fa-envelope: mailto:hello@example.com || Email || '#3f5c4d'
-  fab fa-github: https://github.com/example || GitHub || '#1f2937'
+  fab fa-github: https://github.com/jkl-awake || GitHub || '#1f2937'
 
 search:
   use: local_search
