@@ -47,11 +47,6 @@ h4 {
   border-radius: var(--timeline-radius);
 }
 
-#timeline-home {
-  display: grid;
-  gap: 1.5rem;
-}
-
 .timeline-home__hero {
   display: grid;
   grid-template-columns: minmax(0, 1.3fr) minmax(280px, 0.7fr);
@@ -149,6 +144,41 @@ h4 {
   padding: 1rem 0.2rem;
 }
 
+#recent-posts.recent-posts {
+  display: grid;
+  gap: 1.25rem;
+  position: relative;
+  margin-top: 0.4rem;
+}
+
+#recent-posts.recent-posts::before {
+  content: '';
+  position: absolute;
+  left: 0.78rem;
+  top: 0.4rem;
+  bottom: 0.4rem;
+  width: 2px;
+  background: linear-gradient(180deg, rgba(205, 124, 82, 0.75), rgba(24, 50, 42, 0.12));
+}
+
+#recent-posts > .recent-post-item {
+  position: relative;
+  margin: 0 0 0 1.8rem !important;
+  border-radius: 24px !important;
+}
+
+#recent-posts > .recent-post-item::before {
+  content: '';
+  position: absolute;
+  left: -1.48rem;
+  top: 1.35rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--timeline-accent);
+  box-shadow: 0 0 0 6px rgba(205, 124, 82, 0.14);
+}
+
 .article-sort {
   position: relative;
   padding-left: 1.2rem;
@@ -166,6 +196,7 @@ h4 {
 }
 
 .article-sort-item,
+#recent-posts > .recent-post-item,
 .tl-card,
 .timeline-feature,
 .timeline-chip {
@@ -175,6 +206,7 @@ h4 {
 }
 
 .article-sort-item.is-visible,
+#recent-posts > .recent-post-item.is-visible,
 .tl-card.is-visible,
 .timeline-feature.is-visible,
 .timeline-chip.is-visible {
@@ -327,5 +359,9 @@ h4 {
 
   .timeline-home__hero {
     padding: 1.4rem;
+  }
+
+  #recent-posts > .recent-post-item {
+    margin-left: 1.2rem !important;
   }
 }
