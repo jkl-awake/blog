@@ -35,8 +35,9 @@ document.addEventListener('DOMContentLoaded', () => {
       <a class="timeline-chip" href="/now/"><i class="fas fa-bolt"></i><span>了解最近在做什么</span></a>
     `;
 
-    homePosts.parentNode.insertBefore(nav, homePosts);
-    homePosts.parentNode.insertBefore(hero, nav);
+    const firstChild = homePosts.firstChild;
+    homePosts.insertBefore(nav, firstChild);
+    homePosts.insertBefore(hero, nav);
   }
 
   const items = document.querySelectorAll('.article-sort-item:not(.year), #recent-posts > .recent-post-item, .tl-card, .timeline-feature, .timeline-chip');
