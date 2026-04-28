@@ -3,6 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const isHome = Boolean(homePosts);
 
   if (isHome && !document.querySelector('.timeline-home__hero')) {
+    const intro = document.createElement('div');
+    intro.className = 'timeline-home__intro';
+
     const hero = document.createElement('section');
     hero.className = 'card-widget timeline-home__hero';
     hero.innerHTML = `
@@ -35,12 +38,15 @@ document.addEventListener('DOMContentLoaded', () => {
       <a class="timeline-chip" href="/now/"><i class="fas fa-bolt"></i><span>了解最近在做什么</span></a>
     `;
 
-    const firstChild = homePosts.firstChild;
-    homePosts.insertBefore(nav, firstChild);
-    homePosts.insertBefore(hero, nav);
+    intro.appendChild(hero);
+    intro.appendChild(nav);
+
+    const postList = homePosts.querySelector('.recent-post-items');
+    homePosts.insertBefore(intro, postList);
+    homePosts.classList.add('timeline-home-ready');
   }
 
-  const items = document.querySelectorAll('.article-sort-item:not(.year), #recent-posts > .recent-post-item, .tl-card, .timeline-feature, .timeline-chip');
+  const items = document.querySelectorAll('.article-sort-item:not(.year), #recent-posts .recent-post-items > .recent-post-item, .tl-card, .timeline-feature, .timeline-chip');
 
   if (!('IntersectionObserver' in window)) {
     items.forEach((item) => item.classList.add('is-visible'));

@@ -122,6 +122,12 @@ h4 {
   gap: 0.9rem;
 }
 
+.timeline-home__intro {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
 .timeline-chip {
   display: inline-flex;
   align-items: center;
@@ -144,14 +150,14 @@ h4 {
   padding: 1rem 0.2rem;
 }
 
-#recent-posts.recent-posts {
+#recent-posts.timeline-home-ready.recent-posts .recent-post-items {
   display: grid;
   gap: 1.25rem;
   position: relative;
   margin-top: 0.4rem;
 }
 
-#recent-posts.recent-posts::before {
+#recent-posts.timeline-home-ready.recent-posts .recent-post-items::before {
   content: '';
   position: absolute;
   left: 0.78rem;
@@ -161,13 +167,13 @@ h4 {
   background: linear-gradient(180deg, rgba(205, 124, 82, 0.75), rgba(24, 50, 42, 0.12));
 }
 
-#recent-posts > .recent-post-item {
+#recent-posts.timeline-home-ready .recent-post-items > .recent-post-item {
   position: relative;
   margin: 0 0 0 1.8rem !important;
   border-radius: 24px !important;
 }
 
-#recent-posts > .recent-post-item::before {
+#recent-posts.timeline-home-ready .recent-post-items > .recent-post-item::before {
   content: '';
   position: absolute;
   left: -1.48rem;
@@ -206,7 +212,7 @@ h4 {
 }
 
 .article-sort-item.is-visible,
-#recent-posts > .recent-post-item.is-visible,
+#recent-posts.timeline-home-ready .recent-post-items > .recent-post-item.is-visible,
 .tl-card.is-visible,
 .timeline-feature.is-visible,
 .timeline-chip.is-visible {
@@ -361,7 +367,7 @@ h4 {
     padding: 1.4rem;
   }
 
-  #recent-posts > .recent-post-item {
+  #recent-posts.timeline-home-ready .recent-post-items > .recent-post-item {
     margin-left: 1.2rem !important;
   }
 }
