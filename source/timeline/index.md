@@ -8,22 +8,14 @@ aside: false
 <div class="timeline-page">
   <p class="timeline-lead">这页不是文章归档的重复，而是把一些关键节点单独提出来，方便快速理解这个站点和个人工作的演变轨迹。</p>
 
+  <!-- 加载指示 -->
+  <div class="timeline-loading" style="text-align: center; color: #999; padding: 20px;">
+    <i class="fas fa-spinner fa-spin"></i> 加载中...
+  </div>
+
+  <!-- 时间线内容将动态加载到这里 -->
   <div class="timeline-stack">
-    <div class="tl-card">
-      <p class="tl-date">2026.04</p>
-      <h3>个人站改造成时间线结构</h3>
-      <p>首页从常规博客流改为时间流入口，保留文章能力，同时增加项目、此刻、关于等轻量页面。</p>
-    </div>
-    <div class="tl-card">
-      <p class="tl-date">2026.03</p>
-      <h3>开始梳理长期维护的项目</h3>
-      <p>把零散记录收束成少数几个明确主题，为后续写作、归档和展示准备稳定骨架。</p>
-    </div>
-    <div class="tl-card">
-      <p class="tl-date">2025.12</p>
-      <h3>轻量服务器上线</h3>
-      <p>站点从本地预览迁到服务器托管，后续只保留静态构建产物和少量运维脚本。</p>
-    </div>
+    <!-- 备用内容：当 API 加载失败时显示 -->
     <div class="tl-card">
       <p class="tl-date">下一步</p>
       <h3>接入真实内容与部署流程</h3>
@@ -31,3 +23,13 @@ aside: false
     </div>
   </div>
 </div>
+
+<!-- 
+  页面依赖的脚本（按顺序加载）：
+  1. api-config.js      - API 配置
+  2. api-manager.js     - API 管理器
+  3. timeline-loader.js - 时间线数据加载脚本
+-->
+<script src="/js/api-config.js"></script>
+<script src="/js/api-manager.js"></script>
+<script src="/js/timeline-loader.js"></script>
